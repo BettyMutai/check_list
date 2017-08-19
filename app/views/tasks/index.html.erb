@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Tasks</h1>
-<%= link_to 'New Task', new_task_path %>
+<%= link_to 'New Task', new_task_path, id: 'new_link',remote: true %>
 <h3>Incomplete Tasks</h3>
 <div class="tasks" id="incomplete_tasks">
   <%= render @incomplete_tasks %>

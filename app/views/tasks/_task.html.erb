@@ -1,8 +1,7 @@
-<%= form_for task do |f| %>
+<%= form_for task,remote: true do |f| %>
   <%= f.check_box :complete %>
   <%= f.submit "Update" %>
-  <%=task.name%>
   <%#= f.label :complete, task.name %>
-  <%#= best_in_place task, :name, tabindex: "1" %>
+  <%= best_in_place task, :name, tabindex: "1" %>
   <%= link_to '(remove)', task, method: :delete, data: {confirm: 'Are you sure'} %>
 <% end %>
